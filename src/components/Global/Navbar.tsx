@@ -9,7 +9,6 @@ const Navbar = () => {
               <h1 className="text-2xl font-bold font-satoshi bg-clip-text text-transparent animate-gradient-spin bg-[linear-gradient(90deg,#E2CBFF,#393BB2,#E2CBFF)] bg-[length:200%_200%]">
                   AutomizeX
               </h1>
-
       </aside>
           <nav className="absolute left-[50%] top-[50%] transform translate-x-[-50%] translate-y-[-50%] hidden md:block">
               <ul className="flex items-center gap-4 list-none">
