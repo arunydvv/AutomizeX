@@ -6,8 +6,8 @@ const Navbar = () => {
   return (
     <header className="fixed right-0 left-0 top-0 py-4 px-4 bg-black/40 backdrop-blur-lg z-[100] flex  border-b-[1px] border-neutral-900 justify-between">
       <aside className="flex items-center gap-[2px]">
-              <h1 className="text-2xl font-bold font-satoshi bg-clip-text text-transparent animate-gradient-spin bg-[linear-gradient(90deg,#E2CBFF,#393BB2,#E2CBFF)] bg-[length:200%_200%]">
-                  AutomizeX
+              <h1 className="text-xl md:text-3xl  bg-clip-text text-transparent bg-gradient-to-b from-slate-50 to-neutral-600 font-sans font-bold">
+                   AutomizeX
               </h1>
       </aside>
           <nav className="absolute left-[50%] top-[50%] transform translate-x-[-50%] translate-y-[-50%] hidden md:block">

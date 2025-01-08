@@ -1,11 +1,15 @@
+"use client"
 import { ContainerScroll } from "@/components/Global/Container-Scroll-Animation";
 import { HeroParallax } from "@/components/Global/hero-parallax";
 import { InfiniteMovingCards } from "@/components/Global/InfiniteCards";
+import { LampContainer } from "@/components/Global/LampEffect";
 import Navbar from "@/components/Global/Navbar";
+import { SparklesCore } from "@/components/Global/Particles";
+import { DarkPricing } from "@/components/Global/Pricing";
 import { Button } from "@/components/ui/button";
 import {  products } from "@/Constants/parallax-products";
 import { testimonials } from "@/Constants/statics";
-
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -25,8 +29,8 @@ export default function Home() {
                     Start For Free Today
                   </span>
                 </Button>
-                <h1 className="text-5xl md:text-8xl  bg-clip-text text-transparent bg-gradient-to-b from-slate-50 to-neutral-600 font-sans font-bold pb-5">
-                  Automate Your Work With AutomizeX
+                <h1 className="text-5xl md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-slate-50 to-neutral-600 font-sans font-bold pb-5">
+                  Streamline Your Workflow with AutomizeX
                 </h1>
               </div>
             }
@@ -41,7 +45,25 @@ export default function Home() {
         direction="right"
         speed="slow"
       />
-      <HeroParallax products={products} />
+
+      {/* <HeroParallax products={products} /> */}
+
+      <LampContainer>
+        <motion.h1
+          initial={{ opacity: 0.5, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.3,
+            duration: 0.8,
+            ease: "easeInOut",
+          }}
+          className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-5xl"
+        >
+          Plans that fit you  <br />   the Best
+        </motion.h1>
+        
+      </LampContainer>
+      <DarkPricing></DarkPricing>
       
 
 
