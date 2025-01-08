@@ -1,4 +1,5 @@
 import { ContainerScroll } from "@/components/Global/Container-Scroll-Animation";
+import { HeroParallax } from "@/components/Global/hero-parallax";
 import Navbar from "@/components/Global/Navbar";
 import { Button } from "@/components/ui/button";
 
@@ -29,6 +30,10 @@ export default function Home() {
           />
         </div>
       </section>
+
+      <HeroParallax
+        products={}
+      />
 
 
     </main>
