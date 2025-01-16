@@ -10,15 +10,16 @@ export function SparklesPreview() {
     return (
         <div className="h-[40rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
             <HoverButtonHero />
-            <h1 className="md:text-6xl text-3xl lg:text-7xl font-bold text-center text-white relative z-20">
-               Streamline your Workflow <br /> with AutomizeX
+
+            <h1 className="md:text-6xl text-3xl lg:text-7xl  relative z-20 text-center   bg-clip-text text-transparent bg-gradient-to-b from-slate-50 to-neutral-600 font-sans font-bold">
+                Streamline your Workflow <br /> with AutomizeX
             </h1>
-            <div className="w-[70rem] h-40 relative">
+            <div className="w-[70rem] h-40 relative mt-1">
                 {/* Gradients */}
-                <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
-                <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
-                <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-3/4 blur-sm" />
-                <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
+                <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-slate-500 to-transparent h-[2px] w-3/4 blur-sm" />
+                <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-gray-500 to-transparent h-px w-3/4" />
+                <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-slate-500 to-transparent h-[5px] w-3/4 blur-sm" />
+                <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-gray-500 to-transparent h-px w-1/4" />
 
                 {/* Core component */}
                 <SparklesCore

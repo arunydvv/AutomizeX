@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils"
 
 interface HoverButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode
+  className?: string
 }
 
 const HoverButton = React.forwardRef<HTMLButtonElement, HoverButtonProps>(
@@ -103,26 +104,22 @@ const HoverButton = React.forwardRef<HTMLButtonElement, HoverButtonProps>(
         onPointerEnter={handlePointerEnter}
         onPointerLeave={handlePointerLeave}
         {...props}
-        style={{
-          "--circle-start": "var(--tw-gradient-from, #a0d9f8)",
-          "--circle-end": "var(--tw-gradient-to, #3a5bbf)",
-        }}
       >
         {circles.map(({ id, x, y, color, fadeState }) => (
           <div
-            key={id}
-            className={cn(
-              "absolute w-3 h-3 -translate-x-1/2 -translate-y-1/2 rounded-full",
-              "blur-lg pointer-events-none z-[-1] transition-opacity duration-300",
-              fadeState === "in" && "opacity-75",
-              fadeState === "out" && "opacity-0 duration-[1.2s]",
-              !fadeState && "opacity-0"
-            )}
-            style={{
-              left: x,
-              top: y,
-              background: color,
-            }}
+        key={id}
+        className={cn(
+          "absolute w-3 h-3 -translate-x-1/2 -translate-y-1/2 rounded-full",
+          "blur-lg pointer-events-none z-[-1] transition-opacity duration-300",
+          fadeState === "in" && "opacity-75",
+          fadeState === "out" && "opacity-0 duration-[1.2s]",
+          !fadeState && "opacity-0"
+        )}
+        style={{
+          left: x,
+          top: y,
+          background: color,
+        }}
           />
         ))}
         {children}
