@@ -1,5 +1,6 @@
 "use client"
 
+import { Footer } from "@/components/Global/Footer";
 import { SparklesPreview } from "@/components/Global/Hero";
 // import { ContainerScroll } from "@/components/Global/Container-Scroll-Animation";
 import { InfiniteMovingCards } from "@/components/Global/InfiniteCards";
@@ -31,6 +32,7 @@ export default function Home() {
 
      
       <DarkPricing></DarkPricing>
+      <Footer></Footer>
       
 
 
