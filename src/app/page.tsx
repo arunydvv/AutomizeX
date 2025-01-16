@@ -17,14 +17,11 @@ export default function Home() {
           <SparklesPreview />
 
         </div>
-        <div className="flex flex-col mt-[-100px] md:mt-[-50px]">
-          
-        </div>
       </section>
 
 
       <InfiniteMovingCards
-        className="md:my-[28rem] mt-[-100px]"
+        className="md:my-[12rem] mt-[10px]"
         items={testimonials}
         direction="right"
         speed="slow"
