@@ -1,11 +1,10 @@
 "use client"
 
-import { Footer } from "@/components/Global/Footer";
-import { SparklesPreview } from "@/components/Global/Hero";
-// import { ContainerScroll } from "@/components/Global/Container-Scroll-Animation";
-import { InfiniteMovingCards } from "@/components/Global/InfiniteCards";
-import Navbar from "@/components/Global/Navbar";
-import { DarkPricing } from "@/components/Global/Pricing";
+import { Footer } from "@/components/Hero/Footer";
+import { SparklesPreview } from "@/components/Hero/Hero";
+import { InfiniteMovingCards } from "@/components/Hero/InfiniteCards";
+import Navbar from "@/components/Hero/Navbar";
+import { DarkPricing } from "@/components/Hero/Pricing";
 import { testimonials } from "@/Constants/statics";
 
 export default function Home() {
