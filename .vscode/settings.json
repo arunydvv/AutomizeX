@@ -1,0 +1,12 @@
+{
+  "files.exclude": {
+    "node_modules": true,
+    ".dist": true,
+    "certificates": true,
+    ".next": true,
+    "eslint.config.mjs": true,
+    "next.config.ts": true,
+    "components.json": true,
+    "postcss.config.ts": true,
+  }
+}
