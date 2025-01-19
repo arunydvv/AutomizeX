@@ -1,20 +1,18 @@
-"use client"
-import InfoBar from '@/components/Infobar'
-import Sidebar from '@/components/Sidebar'
 import React from 'react'
-type Props = {Children : React.ReactNode}
+import Sidebar from '@/components/Sidebar'
+import InfoBar from '@/components/Infobar'
 
-const Layout = (props : Props) => {
+type Props = { children: React.ReactNode }
+
+const Layout = (props: Props) => {
   return (
-
-      <div className='flex overflow-hidden h-screen '>
-        <Sidebar />
-      <div className='w-full '>
+    <div className="flex overflow-hidden h-screen">
+      <Sidebar />
+      <div className="w-full">
         <InfoBar />
-          {props.Children}
+        {props.children}
       </div>
-      </div>
-
+    </div>
   )
 }
 
