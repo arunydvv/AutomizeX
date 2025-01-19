@@ -9,10 +9,12 @@ import {
     TooltipTrigger,
 } from '@/components/ui/tooltip'
 
+
 import clsx from 'clsx'
 import { Separator } from '@/components/ui/separator'
 import { Database, GitBranch, LucideMousePointerClick } from 'lucide-react'
 import { menuOptions } from '@/Constants/menu'
+import { ModeToggle } from '../Global/ModeToggle'
 
 type Props = {}
 
@@ -26,7 +28,7 @@ const MenuOptions = (props: Props) => {
                     className="flex font-bold flex-row "
                     href="/"
                 >
-                    fuzzie.
+                    AutomizeX
                 </Link>
                 <TooltipProvider>
                     {menuOptions.map((menuItem) => (
@@ -90,6 +92,7 @@ const MenuOptions = (props: Props) => {
                         />
                     </div>
                 </div>
+                <ModeToggle/>
             </div>
         </nav>
     )
