@@ -1,26 +1,37 @@
-import  ProfileForm  from '@/components/Forms/profile-form'
 import React from 'react'
+import { db } from '@/lib/db'
+import ProfilePicture from '@/components/Settings/ProfilePicture'
+import ProfileForm from '@/components/Forms/profile-form'
+const currentUser = 'currents'
 type Props = {}
 
-const page = (props: Props) => {
+const Settings = async (props: Props) => {
+ 
+
   return (
-    <div className='flex flex-col gap-4 relative   '>
-      
-      <h1 className='text-4xl sticky top-0 z-[10] p-6 bg-background/50 backdrop-blur-lg flex items-center border-b'>
-        Settings
+    <div className="flex flex-col gap-4">
+      <h1 className="sticky top-0 z-[10] flex items-center justify-between border-b bg-background/50 p-6 text-4xl backdrop-blur-lg">
+        <span>Settings</span>
       </h1>
-      <div className='flex flex-col gap-10 p-6'>
-        <div className='profile-pic'>
-          <h2 className='text-2xl font-bold '>User profile</h2>
-          <p className='text-base text-white/50'>Add or update your information</p>
+      <div className="flex flex-col gap-10 p-6">
+        <div>
+          <h2 className="text-2xl font-bold">User Profile</h2>
+          <p className="text-base text-white/50">
+            Add or update your information
+          </p>
         </div>
-        <ProfileForm />
-
-
-
+        <ProfilePicture
+          onDelete={removeProfileImage}
+          userImage={user?.profileImage || ''}
+          onUpload={uploadProfileImage}
+        />
+        <ProfileForm
+          user={user}
+          onUpdate={updateUserInfo}
+        />
       </div>
     </div>
   )
 }
 
-export default page
+export default Settings
